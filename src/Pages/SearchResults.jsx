@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import NavBar from '../Components/NavBar.jsx'
+import NavBar from '../Components/HomeComponents/NavBar.jsx'
 
 function SearchResults() {
     const [searchParams] = useSearchParams()
@@ -13,7 +13,7 @@ function SearchResults() {
         if (!q) return
         setLoading(true)
         setError(null)
-        fetch(`http://localhost:3000/api/Movies/search?title=${encodeURIComponent(q)}`)
+        fetch(`http://localhost:3000/api/movies/search?title=${encodeURIComponent(q)}`)
             .then(res => {
                 if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`)
                 return res.json()
