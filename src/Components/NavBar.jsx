@@ -1,28 +1,22 @@
 function NavBar() {
+  return (
+    <div className="navbar">
 
-    return (
-        <div className="navbar">
+        <ul className="nav-left">
+            <li>Home</li>
+            <li>Movies</li>
+            <li>Genres</li>
+            <li>Popular</li>
+            <li>New Releases</li>
+        </ul>
 
-            <ul className="nav-links">
-                <li>Home</li>
-                <li>Movies</li>
-                <li>Genres</li>
-                <li>Popular</li>
-                <li>New Releases</li>
-            </ul>
-            
-            <form className="search-bar">
-                <input type="text" placeholder="Search movies" />
-                <button type="submit">Go</button>
-            </form>
-          
+        <div className="spacer"></div>
 
-        </div>
+        <ul className="nav-right">
+            <li className="login">Login</li>
+        </ul>
 
-
-    )
-
-
-
+    </div>
+  )
 }
 export default NavBar

@@ -17,10 +17,13 @@
   gap: 1.5rem;
 }
 
+
 .navbar .left img {
   height: 30px;
   cursor: pointer;
 }
+
+
 
 /* Center nav links */
 .navbar ul {
@@ -43,36 +46,4 @@
   color: #6E00B3; /* highlight on hover, orange like screenshot */
 }
 
-/* Search bar on right */
-.navbar .search-bar {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: #1f1f1f;
-  padding: 0.3rem 0.8rem;
-  border-radius: 9999px; /* pill shape */
-}
 
-.navbar .search-bar input {
-  background: transparent;
-  border: none;
-  outline: none;
-  color: white;
-  width: 200px;
-  font-size: 0.9rem;
-}
-
-.navbar .search-bar button {
-  background: #6E00B3;
-  border: none;
-  padding: 0.4rem 0.8rem;
-  border-radius: 9999px;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.2s ease;
-}
-
-.navbar .search-bar button:hover {
-  background: #ff7c3a;
-}
