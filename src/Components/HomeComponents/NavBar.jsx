@@ -10,8 +10,6 @@ function NavBar() {
             <li><Link to="/genres">Genres</Link></li>
         </ul>
 
-        <div className="spacer"></div>
-
         <ul className="nav-right">
             <li className="login">Login</li>
         </ul>
