@@ -1,0 +1,41 @@
+import { useEffect, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
+import NavBar from '../Components/NavBar.jsx'
+
+function SearchResults() {
+    const [searchParams] = useSearchParams()
+    const q = searchParams.get('q')
+    const [results, setResults] = useState([])
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState(null)
+
+    useEffect(() => {
+        if (!q) return
+        setLoading(true)
+        setError(null)
+        fetch(`http://localhost:3000/api/Movies/search?title=${encodeURIComponent(q)}`)
+            .then(res => {
+                if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`)
+                return res.json()
+            })
+            .then(data => setResults(data))
+            .catch(err => setError(err.message))
+            .finally(() => setLoading(false))
+    }, [q])
+
+    return (
+        <>
+            <NavBar />
+            <h2>Results for "{q}"</h2>
+            {loading && <p>Loading...</p>}
+            {error && <p>Error: {error}</p>}
+            {!loading && !error && results.length === 0 && <p>No movies found.</p>}
+            <ul>
+                {results.map((movie, i) => (
+                    <li key={i}>{JSON.stringify(movie)}</li>
+                ))}
+            </ul>
+        </>
+    )
+}
+export default SearchResults

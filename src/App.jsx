@@ -1,20 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-
-//import './css/App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './css/index.css'
 import Home from './Pages/Home.jsx'
-
+import Catalog from './Pages/Catalog.jsx'
+import Genres from './Pages/Genres.jsx'
+import SearchResults from './Pages/SearchResults.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-
-    <Home/>
-
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/catalog" element={<Catalog />} />
+        <Route path="/genres" element={<Genres />} />
+        <Route path="/search" element={<SearchResults />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

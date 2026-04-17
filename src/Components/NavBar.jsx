@@ -1,13 +1,13 @@
+import { Link } from 'react-router-dom'
+
 function NavBar() {
   return (
     <div className="navbar">
 
         <ul className="nav-left">
-            <li>Home</li>
-            <li>Movies</li>
-            <li>Genres</li>
-            <li>Popular</li>
-            <li>New Releases</li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/catalog">Movies</Link></li>
+            <li><Link to="/genres">Genres</Link></li>
         </ul>
 
         <div className="spacer"></div>
