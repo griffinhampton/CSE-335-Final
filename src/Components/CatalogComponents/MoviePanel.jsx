@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 function MoviePanel({movie}) {
     return(
-        <Link to="/info">
+        <Link to={`/movie/${movie.movie_id}`}>
             <div className="Panel-Card">
                 <div className="Panel-Image">
                     <img src={`https://image.tmdb.org/t/p/w500${movie.movie_poster_url}`}/>
