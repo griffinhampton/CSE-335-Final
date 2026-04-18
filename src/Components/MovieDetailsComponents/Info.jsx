@@ -17,16 +17,15 @@ function Info({ movieId }) {
                 <img src={`https://image.tmdb.org/t/p/w500${movie.movie_poster_url}`} alt={movie.movie_title} />
             </div>
 
-            <div>
-                <h1 className="Info-Title">{movie.movie_title}</h1>
-                <h3 className="Info-Runtime">{movie.movie_runtime} min</h3>
-                <h3 className="Info-Description">{movie.movie_description}</h3>
-                <h3 className="Info-Genre">{movie.genres}</h3>
-                <h3 className="Info-Company">{movie.company_name}</h3>
+            <div className="Info-ShowDetails1">
+                <h1>{movie.movie_title}</h1>
+                <h3>{movie.movie_runtime} min</h3>
+
+                <h3>{movie.movie_description}</h3>
             </div>
 
-            <div>
-                <h2>Screenings</h2>
+            <div className="Info-Screenings">
+                <h2>Screening</h2>
                 {movie.screenings.length === 0 ? (
                     <p>No screenings available.</p>
                 ) : (
@@ -39,7 +38,13 @@ function Info({ movieId }) {
                     ))
                 )}
             </div>
+
+            <div className="Info-ShowDetails2">
+                <h3>Genre: {movie.genres}</h3>
+                <h3>Company: {movie.company_name}</h3>
+            </div>
         </div>
+
     );
 }
 export default Info

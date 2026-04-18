@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
+
 import NavBar from '../Components/HomeComponents/NavBar.jsx'
+import MoviePanel from '../Components/CatalogComponents/MoviePanel';
+
+import "../css/MoviePanel.css"
 
 function SearchResults() {
     const [searchParams] = useSearchParams()
@@ -30,11 +34,15 @@ function SearchResults() {
             {loading && <p>Loading...</p>}
             {error && <p>Error: {error}</p>}
             {!loading && !error && results.length === 0 && <p>No movies found.</p>}
-            <ul>
+
+            <div className="Panel-Container">
                 {results.map((movie, i) => (
-                    <li key={i}>{JSON.stringify(movie)}</li>
+                    <MoviePanel
+                        key={i}
+                        movie={movie}/>
                 ))}
-            </ul>
+            </div>
+
         </>
     )
 }

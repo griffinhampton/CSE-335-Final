@@ -3,6 +3,7 @@ import Info from "../Components/MovieDetailsComponents/Info"
 import NavBar from "../Components/HomeComponents/NavBar";
 
 import "../css/NavBar.css";
+import "../css/Info.css";
 
 function MovieDetails() {
     const { id } = useParams();

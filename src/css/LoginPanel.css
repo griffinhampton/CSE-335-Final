@@ -1,3 +1,8 @@
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 /* ===== PAGE CENTERING ===== */
 .Window-Main {
     margin: 0;
@@ -12,6 +17,7 @@
 
 /* ===== MAIN CONTAINER ===== */
 .Window-Container {
+
     background: #1e1e1e;
     padding: 40px;
     border-radius: 12px;
@@ -50,7 +56,7 @@
 /* ===== BUTTON ===== */
 .Window-Button {
     margin-top: 20px;
-    width: 100%;
+    width: 105%;
     padding: 10px;
 
     border: none;
@@ -73,7 +79,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 80px;
-
+    text-decoration: none;
     font-size: 14px;
 }
 
@@ -87,4 +93,5 @@
 
 .Window-SignUp:hover {
     text-decoration: underline;
+
 }

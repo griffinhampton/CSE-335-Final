@@ -1,0 +1,101 @@
+/* ===== PAGE BACKGROUND (different from navbar) ===== */
+.Info-Container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "image main side"
+        "image bottom side";
+
+    gap: 30px;
+
+    max-width: 1200px;
+    margin: 80px auto 0 auto; /* pushes below navbar */
+    padding: 40px;
+
+    background: #1f1f1f; /* lighter, less harsh */
+    color: #eaeaea;
+    min-height: 100vh;
+
+    font-family: "Inter", "Arial", sans-serif;
+}
+
+/* ===== GRID AREAS ===== */
+.Info-Image {
+    grid-area: image;
+}
+
+.Info-ShowDetails1 {
+    grid-area: main;
+}
+
+.Info-Screenings {
+    grid-area: bottom;
+}
+
+.Info-ShowDetails2 {
+    align-self: start;
+    margin-top: 20px;
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    height: fit-content;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===== IMAGE ===== */
+.Info-Image img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* ===== MAIN TEXT ===== */
+.Info-Title {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+}
+
+.Info-Runtime {
+    font-size: 14px;
+    opacity: 0.75;
+    margin-bottom: 10px;
+}
+
+.Info-Description {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* ===== RIGHT SIDE (GENRE + COMPANY) ===== */
+.Info-Genre,
+.Info-Company {
+    font-size: 14px;
+    opacity: 0.85;
+    margin-bottom: 10px;
+}
+
+/* ===== SCREENINGS (MIDDLE BOTTOM) ===== */
+.Info-Screenings {
+    margin-top: 20px;
+}
+
+.Info-Screenings h2 {
+    margin-bottom: 10px;
+}
+
+/* ===== TICKET CARD ===== */
+.Ticket-Card {
+    background: #2a2a2a;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ===== SMALL POLISH ===== */
+.Ticket-TheatreName {
+    margin: 0;
+}
