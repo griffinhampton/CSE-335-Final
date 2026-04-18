@@ -1,24 +1,20 @@
-import { useState } from 'react'
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
-
-//import './css/App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import '../css/index.css'
 import Home from '../Pages/Home.jsx'
 import Catalog from '../Pages/Catalog.jsx'
-
+import Genres from '../Pages/Genres.jsx'
+import SearchResults from '../Pages/SearchResults.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-      <>
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home/>} />
-                <Route path="/movies" element={<Catalog/>} />
-            </Routes>
-        </BrowserRouter>
-      </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/catalog" element={<Catalog />} />
+        <Route path="/genres" element={<Genres />} />
+        <Route path="/search" element={<SearchResults />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-export default App;
+export default App

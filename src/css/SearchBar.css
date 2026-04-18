@@ -51,7 +51,7 @@
 }
 
 .SearchBar {
-  height: calc(100vh - 60px); /* full screen minus navbar height */
+  height: calc(50vh); /* full screen minus navbar height */
   display: flex;
   justify-content: center; /* horizontal center */
   align-items: center;     /* vertical center */

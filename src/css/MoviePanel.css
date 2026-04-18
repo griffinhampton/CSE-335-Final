@@ -1,0 +1,72 @@
+/* ===== GRID CONTAINER ===== */
+.Panel-Container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===== MOVIE CARD ===== */
+.Panel-Card {
+    background: #1e1e1e;
+    border-radius: 12px;
+    overflow: hidden;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Panel-Card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== IMAGE ===== */
+.Panel-Image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== TEXT AREA ===== */
+.Panel-Info {
+    padding: 10px;
+}
+
+.Panel-Info h3 {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVE (IMPORTANT) ===== */
+@media (max-width: 1200px) {
+    .Panel-Container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .Panel-Container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .Panel-Container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .Panel-Container {
+        grid-template-columns: 1fr;
+    }
+}

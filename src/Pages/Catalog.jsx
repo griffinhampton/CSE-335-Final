@@ -1,5 +1,11 @@
 import { useEffect, useState } from 'react';
 
+import NavBar from "../Components/HomeComponents/NavBar";
+import MoviePanel from '../Components/CatalogComponents/MoviePanel';
+
+import "../css/NavBar.css";
+import "../css/MoviePanel.css"
+
 function Catalog() {
     const [movies, setMovies] = useState([]);
 
@@ -11,11 +17,21 @@ function Catalog() {
 
     return (
         <>
-            <ul>
+            <NavBar/>
+
+            <div className="Panel-Container">
                 {movies.map((movie, i) => (
-                    <li key={i}>{JSON.stringify(movie)}</li>
+                    <MoviePanel
+                        key={i}
+                        movie={movie}/>
                 ))}
-            </ul>
+
+
+
+            </div>
+
+
+            
         </>
     );
 }

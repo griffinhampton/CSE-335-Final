@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react';
 
+import NavBar from "../Components/HomeComponents/NavBar";
+
+import "../css/NavBar.css";
+
 function Genres() {
     const [genres, setGenres] = useState([]);
 
@@ -11,6 +15,7 @@ function Genres() {
 
     return (
         <>
+            <NavBar/>
             <ul>
                 {genres.map((genre, i) => (
                     <li key={i}>{JSON.stringify(genre)}</li>
