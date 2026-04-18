@@ -25,13 +25,7 @@ function Catalog() {
                         key={i}
                         movie={movie}/>
                 ))}
-
-
-
             </div>
-
-
-            
         </>
     );
 }

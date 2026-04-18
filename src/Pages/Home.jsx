@@ -9,7 +9,6 @@ import "../css/SearchBar.css";
 function Home() {
     return (
         <>
-
             <NavBar />
             <SearchBar/>
 

@@ -4,6 +4,7 @@ import Home from '../Pages/Home.jsx'
 import Catalog from '../Pages/Catalog.jsx'
 import Genres from '../Pages/Genres.jsx'
 import SearchResults from '../Pages/SearchResults.jsx'
+import MovieDetails from '../Pages/MovieDetails.jsx'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/genres" element={<Genres />} />
         <Route path="/search" element={<SearchResults />} />
+        <Route path="/info" element={<MovieDetails />} />
       </Routes>
     </BrowserRouter>
   );
