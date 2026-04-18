@@ -14,7 +14,6 @@ connection.connect((err) => {
     process.exitCode = 1;
     return;
   }
-
   console.log("connected!");
 });
 
