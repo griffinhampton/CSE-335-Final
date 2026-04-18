@@ -1,0 +1,90 @@
+/* ===== PAGE CENTERING ===== */
+.Window-Main {
+    margin: 0;
+    height: 100vh;
+    background: #121212;
+    font-family: Arial, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.Window-Container {
+    background: #1e1e1e;
+    padding: 40px;
+    border-radius: 12px;
+    height: 500px;
+    width: 350px;
+    text-align: center;
+    color: white;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== TITLE ===== */
+.Window-Container h1 {
+    margin-bottom: 20px;
+}
+
+/* ===== INPUT SECTION ===== */
+.Window-Info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* ===== INPUT FIELDS ===== */
+.Window-Info input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+
+    background: #2a2a2a;
+    color: white;
+}
+
+/* ===== BUTTON ===== */
+.Window-Button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+
+    border: none;
+    border-radius: 6px;
+    background: #6E00B3;
+    color: white;
+    font-size: 16px;
+
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.Window-Button:hover {
+    background: #ff2e2e;
+
+}
+
+/* ===== REGISTER SECTION ===== */
+.Window-Register {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+
+    font-size: 14px;
+}
+
+.Window-SignUp {
+    color: #ff4c4c;
+    text-decoration: none;
+
+    margin-left: 5px;
+
+}
+
+.Window-SignUp:hover {
+    text-decoration: underline;
+}

@@ -11,7 +11,7 @@ function NavBar() {
         </ul>
 
         <ul className="nav-right">
-            <li className="login">Login</li>
+            <li><Link to="/login">Login</Link></li>
         </ul>
 
     </div>
