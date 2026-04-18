@@ -13,7 +13,7 @@ function SearchResults() {
         if (!q) return
         setLoading(true)
         setError(null)
-        fetch(`http://localhost:3000/api/movies/search?title=${encodeURIComponent(q)}`)
+        fetch(`/api/movies/search?title=${encodeURIComponent(q)}`)
             .then(res => {
                 if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`)
                 return res.json()

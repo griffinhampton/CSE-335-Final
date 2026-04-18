@@ -8,7 +8,7 @@ function Genres() {
     const [genres, setGenres] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/api/genres')
+        fetch('/api/genres')
             .then(res => res.json())
             .then(data => setGenres(data));
     }, []);
