@@ -1,3 +1,5 @@
+
+
 import NavBar from "../Components/HomeComponents/NavBar";
 import SearchBar from "../Components/HomeComponents/SearchBar";
 
@@ -7,11 +9,12 @@ import "../css/SearchBar.css";
 
 
 function Home() {
+
     return (
         <>
-            <NavBar />
-            <SearchBar/>
+            <NavBar/>
 
+            <SearchBar/>
         </>
     );
 }

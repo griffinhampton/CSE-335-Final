@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 
 import NavBar from "../Components/HomeComponents/NavBar";
+import MoviePanel from '../Components/CatalogComponents/MoviePanel';
 
+import "../css/MoviePanel.css"
 import "../css/NavBar.css";
 
 function Genres() {
@@ -16,12 +18,26 @@ function Genres() {
     return (
         <>
             <NavBar/>
+            <div className="Panel-Container">
+                {genres.map((movie, i) => (
+                    <MoviePanel
+                        key={i}
+                        movie={movie}/>
+                ))}
+            </div>
+
+        </>
+    );
+}
+export default Genres;
+/*
             <ul>
                 {genres.map((genre, i) => (
                     <li key={i}>{JSON.stringify(genre)}</li>
                 ))}
             </ul>
-        </>
-    );
-}
-export default Genres;
+
+*/
+/*
+
+*/
