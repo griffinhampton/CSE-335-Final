@@ -35,7 +35,7 @@ router.post('/register', (req, res) => {
             if (results.length)
                 return res.status(409).json({ error: 'An account with that email already exists.' });
 
-            const today = new Date().toISOString().split('T')[0];
+            const today = new Date().toISOString().slice(0, 19).replace('T', ' ');
 
             connection.query(
                 'INSERT INTO Customers (customer_name, customer_email, customer_registered_at, customer_password) VALUES (?, ?, ?, AES_ENCRYPT(?, ?))',
