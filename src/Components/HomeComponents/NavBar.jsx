@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../Services/AuthContext.jsx'
+import { useCart } from '../../Services/CartContext.jsx'
 
 function NavBar() {
     const [genres, setGenres] = useState([]);
     const { user, logout } = useAuth();
+    const { totalItems } = useCart();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -38,6 +40,11 @@ function NavBar() {
                 </li>
             </ul>
             <ul className="nav-right">
+                <li>
+                    <Link to="/checkout" className="cart-link">
+                        Cart{totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
+                    </Link>
+                </li>
                 {user ? (
                     <li className="user-dropdown">
                         <span className="user-title">Logged in as {user.customer_name} ▾</span>

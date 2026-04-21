@@ -6,6 +6,7 @@ const connection = mysql.createConnection({
   user: process.env.DB_USER || "student_gmhamp01",
   password: process.env.DB_PASSWORD || "Spring26",
   database: process.env.DB_NAME || "JSONify",
+  dateStrings: true,
 });
 
 connection.connect((err) => {

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useSearchParams } from 'react-router-dom'
 import { useAuth } from '../../Services/AuthContext.jsx'
 
 function LoginPanel() {
@@ -8,6 +8,8 @@ function LoginPanel() {
     const [error, setError] = useState('');
     const { login } = useAuth();
     const navigate = useNavigate();
+    const [searchParams] = useSearchParams();
+    const redirect = searchParams.get('redirect') || '/';
 
     async function handleLogin(e) {
         e.preventDefault();
@@ -24,7 +26,7 @@ function LoginPanel() {
                 return;
             }
             login(data);
-            navigate('/');
+            navigate(redirect);
         } catch {
             setError('Unable to reach the server. Please try again.');
         }

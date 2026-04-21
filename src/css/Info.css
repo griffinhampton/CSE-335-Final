@@ -99,3 +99,116 @@
 .Ticket-TheatreName {
     margin: 0;
 }
+
+/* ===== TICKET PURCHASE ROW ===== */
+.Ticket-Purchase {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* ===== QUANTITY STEPPER ===== */
+.Ticket-Qty {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #1f1f1f;
+    border-radius: 6px;
+    padding: 4px 8px;
+}
+
+.Ticket-Qty button {
+    background: none;
+    border: none;
+    color: #eaeaea;
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 4px;
+}
+
+.Ticket-Qty button:hover {
+    color: #6E00B3;
+}
+
+.Ticket-Qty span {
+    min-width: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* ===== ADD TO CART BUTTON ===== */
+.Ticket-AddBtn {
+    padding: 6px 14px;
+    background: #6E00B3;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.Ticket-AddBtn:hover {
+    background: #8f00e6;
+}
+
+/* ===== ADDED CONFIRMATION MESSAGE ===== */
+.Cart-AddedMessage {
+    color: #7adb7a;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* ===== LOGIN MODAL ===== */
+.Modal-Overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.Modal-Box {
+    background: #1e1e1e;
+    border-radius: 12px;
+    padding: 32px 40px;
+    text-align: center;
+    color: #eaeaea;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    min-width: 280px;
+}
+
+.Modal-Box p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.Modal-Button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: #6E00B3;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.Modal-Button:hover {
+    background: #8f00e6;
+}
+
+.Modal-Button-Cancel {
+    background: #2a2a2a;
+}
+
+.Modal-Button-Cancel:hover {
+    background: #3a3a3a;
+}

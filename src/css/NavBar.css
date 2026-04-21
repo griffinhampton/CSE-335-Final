@@ -117,3 +117,24 @@
 .user-item:hover {
     background: #333;
 }
+
+/* ===== CART LINK ===== */
+.cart-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cart-badge {
+    background: #6E00B3;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 9px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+}
