@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 import NavBar from "../Components/HomeComponents/NavBar";
 import MoviePanel from '../Components/CatalogComponents/MoviePanel';
@@ -7,19 +8,20 @@ import "../css/MoviePanel.css"
 import "../css/NavBar.css";
 
 function Genres() {
-    const [genres, setGenres] = useState([]);
+    const { id } = useParams();
+    const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-        fetch('/api/genres')
+        fetch(`/api/genres/${id}`)
             .then(res => res.json())
-            .then(data => setGenres(data));
-    }, []);
+            .then(data => setMovies(data));
+    }, [id]);
 
     return (
         <>
             <NavBar/>
             <div className="Panel-Container">
-                {genres.map((movie, i) => (
+                {movies.map((movie, i) => (
                     <MoviePanel
                         key={i}
                         movie={movie}/>

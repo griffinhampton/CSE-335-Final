@@ -71,4 +71,15 @@ router.get('/genres', (req, res) => {
   });
 });
 
+router.get('/genres/:id', (req, res) => {
+  connection.query(
+    'SELECT m.* FROM Movies m JOIN Movie_Genres mg ON m.movie_id = mg.movie_id WHERE mg.genre_id = ?',
+    [req.params.id],
+    (err, results) => {
+      if (err) return res.status(500).json({ error: err.message });
+      res.json(results);
+    }
+  );
+});
+
 export default router;
