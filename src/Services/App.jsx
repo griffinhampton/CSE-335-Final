@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import '../css/index.css'
 import Home from '../Pages/Home.jsx'
+import { AuthProvider } from './AuthContext.jsx'
 
 import Catalog from '../Pages/Catalog.jsx'
 import Genres from '../Pages/Genres.jsx'
@@ -11,6 +12,7 @@ import MovieDetails from '../Pages/MovieDetails.jsx'
 
 function App() {
   return (
+    <AuthProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -23,6 +25,7 @@ function App() {
         <Route path="/genre/:id" element={<Genres />} />
       </Routes>
     </BrowserRouter>
+    </AuthProvider>
   );
 }
 export default App

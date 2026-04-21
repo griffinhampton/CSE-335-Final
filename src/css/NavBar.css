@@ -75,3 +75,45 @@
 .genre-item:hover {
     background: #333;
 }
+
+/* ===== USER DROPDOWN ===== */
+.user-dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-title {
+    padding: 8px 12px;
+    display: inline-block;
+}
+
+.user-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    background: #1f1f1f;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+
+    min-width: 120px;
+    z-index: 999;
+    padding: 8px 0;
+}
+
+.user-dropdown:hover .user-menu {
+    display: block;
+}
+
+.user-item {
+    display: block;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: 0.2s;
+    color: white;
+}
+
+.user-item:hover {
+    background: #333;
+}

@@ -1,7 +1,10 @@
 import { Router } from 'express';
 import connection from '../db.js';
+import accountsRouter from './accounts.js';
 
 const router = Router();
+
+router.use('/auth', accountsRouter);
 
 router.get('/health', (req, res) => {
   res.json({ status: 'ok' });
