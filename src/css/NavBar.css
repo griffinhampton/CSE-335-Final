@@ -55,14 +55,15 @@
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 8px;
 
-    min-width: 180px;
+    min-width: 480px;
     z-index: 999;
-    padding: 8px 0;
+    padding: 8px;
 }
 
 /* SHOW ON HOVER */
 .genre-dropdown:hover .genre-menu {
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 /* ===== ITEMS ===== */
