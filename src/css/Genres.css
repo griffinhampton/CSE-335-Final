@@ -1,0 +1,13 @@
+.genre-page-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 28px 16px 8px;
+    box-sizing: border-box;
+}
+
+.genre-page-header h1 {
+    margin: 0;
+    text-align: center;
+}

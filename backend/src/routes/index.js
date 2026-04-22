@@ -1,11 +1,13 @@
 import { Router } from 'express';
 import connection from '../db.js';
 import accountsRouter from './accounts.js';
+import genreMatchingRouter from './genrematching.js';
 import ticketsRouter from './tickets.js';
 
 const router = Router();
 
 router.use('/auth', accountsRouter);
+router.use('/genres', genreMatchingRouter);
 router.use('/tickets', ticketsRouter);
 
 router.get('/health', (req, res) => {
@@ -69,17 +71,6 @@ router.get('/genres', (req, res) => {
     if (err) return res.status(500).json({ error: err.message });
     res.json(results);
   });
-});
-
-router.get('/genres/:id', (req, res) => {
-  connection.query(
-    'SELECT m.* FROM Movies m JOIN Movie_Genres mg ON m.movie_id = mg.movie_id WHERE mg.genre_id = ?',
-    [req.params.id],
-    (err, results) => {
-      if (err) return res.status(500).json({ error: err.message });
-      res.json(results);
-    }
-  );
 });
 
 export default router;
