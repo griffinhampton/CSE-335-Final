@@ -5,10 +5,9 @@ const router = Router();
 
 router.get('/:id', (req, res) => {
     const sql = `
-        SELECT DISTINCT Movies.*
+        SELECT *
         FROM Movies
-        JOIN Movie_Genres ON Movies.movie_id = Movie_Genres.movie_id
-        WHERE Movie_Genres.genre_id = ?
+        WHERE movie_id IN (SELECT movie_id FROM Movie_Genres WHERE genre_id = ?)
     `;
 
     connection.query(sql, [req.params.id], (err, results) => {
