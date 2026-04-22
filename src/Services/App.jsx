@@ -11,6 +11,7 @@ import Register from '../Pages/Register.jsx'
 import SearchResults from '../Pages/SearchResults.jsx'
 import MovieDetails from '../Pages/MovieDetails.jsx'
 import Checkout from '../Pages/Checkout.jsx'
+import FinalForm from '../Pages/Perfection.jsx'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/movie/:id" element={<MovieDetails />} />
             <Route path="/genre/:id" element={<Genres />} />
             <Route path="/checkout" element={<Checkout />} />
+            <Route path="/perfection" element={<FinalForm />} />
           </Routes>
         </BrowserRouter>
       </CartProvider>
